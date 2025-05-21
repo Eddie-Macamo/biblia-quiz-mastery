@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BarChart, Clock, Star } from 'lucide-react';
 import { useQuiz } from '@/contexts/QuizContext';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BarChart as Chart } from '@/components/ui/chart';
+import { BarChart as Chart } from '@/components/ui/chart/index';
 
 interface QuizHistoryItem {
   id: string;
