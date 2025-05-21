@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { BarChart as RechartsBarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { Bar, XAxis, YAxis, CartesianGrid, Tooltip, BarChart as RechartsBarChart } from "recharts";
 import { ChartContainer, ChartTooltipContent } from "@/components/ui/chart";
 
 interface BarChartProps {
