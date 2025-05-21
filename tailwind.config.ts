@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Bible quiz custom colors
+                bible: {
+                    50: '#EEF2FF',
+                    100: '#E0E7FF',
+                    200: '#C7D2FE',
+                    300: '#A5B4FC',
+                    400: '#818CF8',
+                    500: '#6366F1',
+                    600: '#4F46E5',
+                    700: '#4338CA',
+                    800: '#3730A3',
+                    900: '#312E81',
+                },
+                gold: {
+                    50: '#FFFBEB',
+                    100: '#FEF3C7',
+                    200: '#FDE68A',
+                    300: '#FCD34D',
+                    400: '#FBBF24',
+                    500: '#F59E0B',
+                    600: '#D97706',
+                    700: '#B45309',
+                    800: '#92400E',
+                    900: '#78350F',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,27 +96,44 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' }
+                },
+                'slide-up': {
+                    '0%': { transform: 'translateY(10px)', opacity: '0' },
+                    '100%': { transform: 'translateY(0)', opacity: '1' }
+                },
+                'slide-down': {
+                    '0%': { transform: 'translateY(-10px)', opacity: '0' },
+                    '100%': { transform: 'translateY(0)', opacity: '1' }
+                },
+                'pulse-light': {
+                    '0%, 100%': { opacity: '1' },
+                    '50%': { opacity: '0.8' }
+                },
+                'scale': {
+                    '0%': { transform: 'scale(0.95)' },
+                    '100%': { transform: 'scale(1)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'fade-in': 'fade-in 0.5s ease-out',
+                'slide-up': 'slide-up 0.5s ease-out',
+                'slide-down': 'slide-down 0.5s ease-out',
+                'pulse-light': 'pulse-light 2s ease-in-out infinite',
+                'scale': 'scale 0.2s ease-out'
 			}
-		}
+		},
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
